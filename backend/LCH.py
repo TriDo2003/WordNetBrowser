@@ -49,7 +49,6 @@ def find_most_similar_pair(ss_list1, ss_list2, dist_function):
     for ssi in ss_list1:
         for ssj in ss_list2:
             dist = dist_function(ssi, ssj)
-            print(f'{ssi} - {ssj}: {dist}')
             if dist is not None and dist < min_dist:
                 min_dist = dist
                 min_pair = (ssi, ssj)
