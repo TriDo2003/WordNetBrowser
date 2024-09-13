@@ -12,7 +12,7 @@ class WNAdapter:
     ADJ_RELATIONS  = ['antonyms', 'similar to', 'relational adj', 'also see', 'value of'] 
     ADV_RELATIONS  = ['derived from']
 
-    CYCLIC_RELATIONS = ['antonyms', 'similar to', 'also see', 'relational adj']
+    CYCLIC_RELATIONS = ['derivationally related forms', 'antonyms', 'similar to', 'also see', 'relational adj']
 
     # Utility function for calling relations in Lemma class (base of Synset class)
     # Usage: synsets = _call_lemma_relation(synset('night.n.01'), lambda lemma: lemma.antonyms())
