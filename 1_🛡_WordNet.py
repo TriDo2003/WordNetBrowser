@@ -54,7 +54,8 @@ def main():
             return
         
         if selected_relation == 'examples':
-            st.markdown(wa.synset_examples(synset))
+            for ex in wa.synset_examples(synset):
+                st.markdown(f' => {ex}')
         elif show_details and selected_relation not in wa.CYCLIC_RELATIONS :
             relation_tree = wa.get_relation_recursive(synset, wa.RELATION_NAME_FUNC[pos][selected_relation])
             display_tree(relation_tree)
