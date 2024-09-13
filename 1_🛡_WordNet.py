@@ -49,7 +49,7 @@ def main():
         
         st.markdown(f"<div style='border: 1px solid black; padding: 10px;'><strong>Sense {i + 1}:</strong> {wa.synset_info(synset)}</div>", unsafe_allow_html=True)
 
-        selected_relation = st.radio(label="Relations", options=['examples'] + relations.keys(), horizontal=True, key=f'radio_{i}', label_visibility='collapsed')
+        selected_relation = st.radio(label="Relations", options=['examples'] + list(relations.keys()), horizontal=True, key=f'radio_{i}', label_visibility='collapsed')
         if not selected_relation:
             return
         
