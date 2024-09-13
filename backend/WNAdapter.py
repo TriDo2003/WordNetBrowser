@@ -70,3 +70,6 @@ class WNAdapter:
 
     def synset_info(synset):
         return f'{WNAdapter.synset_words(synset)} -- {synset.definition()} -- ({synset.name()}, id={synset.offset()})'
+    
+    def synset_examples(synset):
+        return f'{synset.examples()}'
