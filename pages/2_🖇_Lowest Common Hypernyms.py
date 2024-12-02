@@ -1,8 +1,12 @@
 import streamlit as st
 from backend.WNAdapter import WNAdapter as wa
 import backend.LCH as utils
+#import nltk
+
 
 def main():
+    #nltk.data.path.append('../wndb')
+
     input = st.text_input("Search for the Lowest Common Hyponym for a list of words", help='"table, chair, sofa" -> "furniture"')
     words = utils.parse_input(input)
 

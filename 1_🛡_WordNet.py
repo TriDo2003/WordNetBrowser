@@ -12,7 +12,8 @@ def display_tree(tree, level=0):
         display_tree(related_ss, level + 1)
 
 def main():
-    nltk.download('wordnet')
+    #nltk.download('wordnet')
+    nltk.data.path.append('./wndb')
 
     # Word input
     word = st.text_input("Search for a word",
